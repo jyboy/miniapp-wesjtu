@@ -1,0 +1,10 @@
+.sass-cache
+*.css.map
+node_modules
+.npm
+logs
+*.log
+npm-debug.log*
+
+variables.js
+feedback.sqlite3

@@ -1,0 +1,42 @@
+<view class="detail-main">
+    <view class="detail-head">
+        <view class="head-left">
+            <view class="head-left-wrapper">
+                <image class="act-poster" src="{{poster}}"></image>
+            </view>
+        </view>
+        <view class="head-right">
+            <view class="head-right-wrapper">
+                <view class="act-name">{{name}}</view>
+                <view class="act-status act-status-user {{status_style}}">{{status}}</view>
+            </view>
+        </view> 
+    </view>
+    <view class="detail-desc">
+        <view class="detail-desc-wrapper">
+            <view class="act-time">
+                <image class="act-time-icon" src="/images/icon_tongqu_time.png"></image>
+                <view class="act-time-text">{{time}}</view>
+            </view>
+            <view class="act-location">
+                <image class="act-location-icon" src="/images/icon_tongqu_location.png"></image>
+                <view class="act-location-text"><view class="act-location-text-wrapper">{{location}}</view></view>
+            </view>
+            <view class="act-source">
+                <image class="act-source-icon" src="/images/icon_tongqu_source.png"></image>
+                <view class="act-source-text"><view class="act-source-text-wrapper">{{source}}</view></view>
+            </view>
+        </view>
+    </view>
+    <scroll-view class="act-contents" scroll-y="true">
+        <block wx:for="{{actContents}}">
+            <view wx:if="{{item.viewIf}}" class="act-paragraph">
+                <text wx:if="{{item.textIf}}" class="act-text">{{item.text}}</text>
+                <view wx:if="{{item.imageIf}}" class="{{item.imageCenter}}"><image mode="aspectFit" src="{{item.image}}"></image></view>
+            </view>
+        </block>
+    </scroll-view>
+    <loading hidden="{{hidden}}">
+        加载中...
+    </loading>
+</view>

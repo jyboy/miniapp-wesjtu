@@ -1,0 +1,94 @@
+.about-main {
+    padding: 50px 0 10px;
+    width: 100%;
+    height: 100%;
+
+    font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+}
+.about-main-wrapper {
+    display: flex;
+
+    height: 100%;
+
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.about-area {
+    display: flex;
+
+    align-items: center;
+    flex-direction: column;
+}
+.about-avatar-wrapper {
+    display: flex;
+
+    width: 80px;
+    height: 80px;
+
+    align-items: center;
+    justify-content: center;
+}
+.about-avatar {
+    width: 80px;
+    height: 80px;
+}
+.about-nickname {
+    margin-top: 10px;
+
+    font-size: 24px;
+
+    color: #000;
+}
+.feedback-form {
+    width: 100%;
+}
+.feedback-form-wrapper {
+    margin: 0 20px 20px;
+    width: calc(100% - 40px);
+}
+.feedback-title {
+    font-size: 16px;
+    text-align: center;
+
+    color: #888;
+}
+.input-wrapper {
+    margin-top: 15px;
+}
+.feedback-input {
+    box-sizing: border-box;
+    border: 1px solid #d9d9d9;
+    border-radius: 5px;
+    padding: 0 5px;
+    height: 34px;
+
+    font-size: 14px;
+
+    transition: all .2s ease;
+}
+.feedback-input-focus {
+    border-color: #0a4ca1;
+
+    box-shadow: 0 0 0 1px rgba(10, 76, 161, .2),
+    inset 0 0 0 1px rgba(10, 76, 161, .2);
+}
+.btn-wrapper {
+    margin-top: 20px;
+}
+.feedback-btn {
+    height: 34px;
+
+    line-height: 30px;
+}
+.copyright {
+    display: flex;
+
+    height: 40px;
+
+    font-size: 14px;
+
+    color: #b2b2b2;
+
+    align-items: flex-end;
+}

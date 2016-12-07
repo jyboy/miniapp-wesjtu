@@ -1,0 +1,31 @@
+<view class="about-main">
+    <view class="about-main-wrapper">
+        <view class="about-area">
+            <view class="about-avatar-wrapper">
+                <image class="about-avatar" src="../../images/icon_wesjtu.png"></image>
+            </view>
+            <text class="about-nickname">我交</text>
+        </view>
+        <form class="feedback-form" bindsubmit="formSubmit">
+            <view class="feedback-form-wrapper">
+                <view class="feedback-title">期待您的反馈</view>
+                <view class="input-wrapper">
+                    <input class="feedback-input {{inputStyle}}" name="feedback" placeholder="建议或吐槽..." bindfocus="inputFocus" bindblur="inputBlur" />
+                </view>
+                <view class="btn-wrapper">
+                    <button class="feedback-btn" formType="submit" type="primary" plain="true">提交</button>
+                </view>
+            </view>
+        </form>
+        <view class="copyright">© 2016 biebuxin 别不信</view>
+    </view>
+    <toast hidden="{{emptyHidden}}" duration="1000" bindchange="toastChange">
+        不能为空哦
+    </toast>
+    <toast hidden="{{invalidHidden}}" duration="1000" bindchange="toastChange">
+        不少于5个字哦
+    </toast>
+    <toast hidden="{{successHidden}}" duration="1000" bindchange="toastChange">
+        反馈成功
+    </toast>
+</view>

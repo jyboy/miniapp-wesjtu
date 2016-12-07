@@ -1,0 +1,17 @@
+{
+    "name": "wesjtu",
+    "version": "1.0.0",
+    "description": "Wechat Miniapp 'WeSJTU'",
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:jyboy/miniapp-wesjtu.git"
+    },
+    "license": "MIT",
+    "keywords": [
+        "wxml",
+        "wxss",
+        "javascript",
+        "node",
+        "express"
+    ]
+}

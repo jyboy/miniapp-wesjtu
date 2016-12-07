@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex">
+    <meta name="keywords" content="反馈收集,wesjtu,微信小程序">
+    <meta name="description" content="微信小程序wesjtu反馈收集">
+    <title>反馈收集 | wesjtu</title>
+    <link href="//cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./stylesheets/feedback.css" rel="stylesheet">
+</head>
+<body id="particle">
+    <div class="content">
+        <div class="content-wrap">
+            <div class="feedback">
+                <div class="feedback-wrap">
+                    <div class="feedback-title">
+                        <p>反馈列表</p>
+                    </div>
+                    <table class="feedback-table">
+                        <thead>
+                            <tr>
+                                <th class="col1">时间</th>
+                                <th class="col2">昵称</th>
+                                <th class="col3">性别</th>
+                                <th class="col4">内容</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% var i=0; feedbackList.forEach(function(item) { if(i<5) { %>
+                                <tr>
+                                    <td class="col1td"><%= item.time %></td>
+                                    <td class="col2td"><%= item.nickname %></td>
+                                    <td class="col3td"><%= item.gender %></td>
+                                    <td class="col4td"><%= item.content %></td>
+                                </tr>
+                            <% } i++; }) %>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+    <div class="footer-panel">
+        <div class="footer-image">
+            <img src="./images/logo.png" alt="青鸟" />
+        </div>
+        <div class="copyright">
+            <span>©2016 qingniao.tech 青鸟工作室</span>
+        </div>
+    </div>
+</div>
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="./javascripts/jquery.particleground.min.js"></script>
+<script>
+    $(function() {
+        $('#particle').particleground({
+            dotColor: '#c8c8c8',
+            lineColor: '#6d6d6d'
+        });
+    });
+</script>
+</body>
+</html>

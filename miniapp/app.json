@@ -1,0 +1,46 @@
+{
+    "pages": [
+        "pages/tongqu/tongqu",
+        "pages/2048/2048",
+        "pages/about/about",
+        "pages/detail/detail"
+    ],
+    "window": {
+        "navigationBarTextStyle": "black",
+        "navigationBarBackgroundColor": "#fbf9fe",
+        "backgroundColor": "#fbf9fe"
+    },
+    "tabBar": {
+        "color": "#454545",
+        "selectedColor": "#0a4ca1",
+        "borderStyle": "white",
+        "backgroundColor": "#f7f7fa",
+        "list": [
+            {
+                "pagePath": "pages/tongqu/tongqu",
+                "text": "同去",
+                "iconPath": "images/icon_tongqu_off.png",
+                "selectedIconPath": "images/icon_tongqu_on.png"
+            },
+            {
+                "pagePath": "pages/2048/2048",
+                "text": "2048",
+                "iconPath": "images/icon_2048_off.png",
+                "selectedIconPath": "images/icon_2048_on.png"
+            },
+            {
+                "pagePath": "pages/about/about",
+                "text": "关于",
+                "iconPath": "images/icon_about_off.png",
+                "selectedIconPath": "images/icon_about_on.png"
+            }
+        ]
+    },
+    "networkTimeout": {
+        "request": 10000,
+        "connectSocket": 10000,
+        "uploadFile": 10000,
+        "downloadFile": 10000
+    },
+    "debug": "true"
+}

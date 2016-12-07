@@ -1,0 +1,31 @@
+<view class="action_cavas" bindtouchstart="tapStart" bindtouchmove="tapMove" bindtouchend="tapEnd">
+    <view class="action-area">
+        <view class="score">
+            <view class="score-title">苟</view>
+            <view class="score-detail">
+                <view class="score-desc">SCORE</view>
+                <view class="score-number">{{score}}</view>
+            </view>
+            <view class="score-detail">
+                <view class="score-desc">BEST</view>
+                <view class="score-number">{{maxscore}}</view>
+            </view>
+        </view>
+        <view class="bc_cavas">
+            <view class="bc" wx:for="{{wordnumbers}}" wx:for-item="row" >
+                <view wx:for="{{row}}" class="bc_ bc_{{item.number}}">{{item.word}}</view>
+            </view>
+        </view>
+    </view>
+</view>
+<modal class="modal" confirm-text="吼啊" cancel-text="不吼" hidden="{{failHidden}}" bindconfirm="modalConfirm" bindcancel="modalCancle">
+    <view>图样图森破！</view><view>重新开始，吼不吼啊？</view>
+</modal>
+<modal class="modal" confirm-text="吼啊" cancel-text="不吼" hidden="{{successHidden}}" bindconfirm="modalConfirm" bindcancel="modalCancle">
+    <view>比一般人不知高到哪里去！</view><view>再来一次，吼不吼啊？</view>
+</modal>
+<modal class="modal" title="请输入组织暗号" confirm-text="确定" no-cancel hidden="{{accessHidden}}" bindconfirm="accessConfirm">
+    <view>
+        <input class="access-input {{inputStyle}}" name="access" placeholder="组织暗号（一个字）" bindfocus="inputFocus" bindblur="inputBlur" />
+    </view>
+</modal>

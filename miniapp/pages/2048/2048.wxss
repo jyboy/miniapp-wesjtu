@@ -1,0 +1,149 @@
+.action_cavas {
+    display: flex;
+
+    width: 100%;
+    height: 100%;
+
+    flex-direction: column;
+    justify-content: center;
+}
+.score {
+    display: flex;
+}
+.score-title {
+    margin: 40rpx 20rpx 40rpx 40rpx;
+    border-radius: 8rpx;
+    height: 150rpx;
+
+    font-size: 2.4rem;
+    line-height: 140rpx;
+    text-align: center;
+
+    color: #7c736a;
+    background-color: #eee4da;
+
+    flex: 1;
+}
+.score-detail {
+    margin: 40rpx 20rpx;
+    border-radius: 10rpx;
+    height: 150rpx;
+
+    font-size: 1.2rem;
+    text-align: center;
+
+    color: #353535;
+    background-color: #eee4da;
+
+    flex: 1;
+}
+.score-detail:last-child {
+    margin-right: 40rpx;
+}
+.score-desc {
+    line-height: 80rpx;
+}
+.score-number {
+    font-weight: 600;
+    line-height: 45rpx;
+}
+.bc_cavas {
+    display: flex;
+
+    margin: 40rpx 40rpx;
+    height: 670rpx;
+
+    background-color: #b8af9e;
+
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.bc {
+    display: flex;
+}
+.bc_ {
+    margin: 6rpx 6rpx;
+    width: 152rpx;
+    height: 152rpx;
+
+    font-size: 60rpx;
+    line-height: 152rpx;
+    text-align: center;
+
+    color: #fff7eb;
+}
+.bc_0 {
+    color: #ccc0b2;
+    background-color: #ccc0b2;
+}
+.bc_2 {
+    color: #7c736a;
+    background-color: #eee4da;
+}
+.bc_4 {
+    color: #7c736a;
+    background-color: #ece0c8;
+}
+.bc_8 {
+    color: #fff7eb;
+    background-color: #f2b179;
+}
+.bc_16 {
+    color: #fff7eb;
+    background-color: #f59563;
+}
+.bc_32 {
+    color: #fff7eb;
+    background-color: #f57c5f;
+}
+.bc_64 {
+    color: #fff7eb;
+    background-color: #f65d3b;
+}
+.bc_128 {
+    color: #fff7eb;
+    background-color: #edce71;
+}
+.bc_256 {
+    color: #fff7eb;
+    background-color: #edcc61;
+}
+.bc_512 {
+    color: #fff7eb;
+    background-color: #ecc850;
+}
+.bc_1024 {
+    color: #fff7eb;
+    background-color: #edc53f;
+}
+.bc_2048 {
+    color: #fff7eb;
+    background-color: #eec22e;
+}
+.access-input {
+    box-sizing: border-box;
+    border: 1px solid #d9d9d9;
+    border-radius: 3px;
+    padding: 0 5px;
+    height: 34px;
+
+    font-size: 14px;
+
+    transition: all .2s ease;
+}
+.access-input-focus {
+    border-color: #0a4ca1;
+
+    box-shadow: 0 0 0 1px rgba(10, 76, 161, .2),
+    inset 0 0 0 1px rgba(10, 76, 161, .2);
+}
+.access-input-warn {
+    border-color: #e64340;
+
+    box-shadow: 0 0 0 1px rgba(230, 67, 64, .2),
+    inset 0 0 0 1px rgba(230, 67, 64, .2);
+}
+.modal {
+    font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+}
