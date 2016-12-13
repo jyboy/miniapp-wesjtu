@@ -1,4 +1,4 @@
-var HOST_URL = 'https://www.qingniao.tech/wesjtu';
+var HOST_URL = 'http://127.0.0.1:3001/wesjtu';
 var GET_ACTS = '/acts';
 var GET_ACT_BY_ID = '/act';
 var POST_FEEDBACK = '/feedback';

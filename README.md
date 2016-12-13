@@ -4,8 +4,6 @@
 
 ## Screenshots
 
-`别不信` or `biebuxin`
-
 ![about](https://raw.githubusercontent.com/jyboy/miniapp-wesjtu/master/screenshots/screenshot-1.jpg)
 
 ![tongqu](https://raw.githubusercontent.com/jyboy/miniapp-wesjtu/master/screenshots/screenshot-2.jpg)
