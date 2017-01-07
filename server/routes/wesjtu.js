@@ -64,7 +64,7 @@ router.get('/acts', function(req, res, next) {
 router.get('/act', function(req, res, next) {
     var query = require('url').parse(req.url, true).query;
     var id = query.id;
-    var indexUrl = "http://www.tongqu.me/index.php/api/act/detail?id=" + id;
+    var indexUrl = "http://tongqu.me/index.php/api/act/detail?id=" + id;
     http.get(indexUrl, function(response) {
         var source = "";
         response.on('data', function(data) {
