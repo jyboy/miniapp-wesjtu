@@ -1,4 +1,4 @@
-<view class="action_cavas" bindtouchstart="tapStart" bindtouchmove="tapMove" bindtouchend="tapEnd">
+<view class="action_cavas" catchtouchstart="tapStart" catchtouchmove="tapMove" catchtouchend="tapEnd">
     <view class="action-area">
         <view class="score">
             <view class="score-title">苟</view>

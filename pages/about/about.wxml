@@ -4,7 +4,7 @@
             <view class="about-avatar-wrapper">
                 <image class="about-avatar" src="../../images/icon_wesjtu.png"></image>
             </view>
-            <text class="about-nickname">我交</text>
+            <text class="about-nickname">WeSJTU</text>
         </view>
         <form class="feedback-form" bindsubmit="formSubmit">
             <view class="feedback-form-wrapper">
@@ -17,7 +17,7 @@
                 </view>
             </view>
         </form>
-        <view class="copyright">© 2016 biebuxin 别不信</view>
+        <view class="copyright">© 2017 biebuxin 别不信</view>
     </view>
     <toast hidden="{{emptyHidden}}" duration="1000" bindchange="toastChange">
         不能为空哦
