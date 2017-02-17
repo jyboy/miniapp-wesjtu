@@ -16,7 +16,7 @@ Page({
         this.fetchData(options.id);
     },
     fetchData: function(id) {
-        var that = this;
+        const that = this;
         this.setData({
             hidden: false
         });
@@ -38,4 +38,4 @@ Page({
             }
         });
     }
-});
+})

@@ -9,8 +9,7 @@ Page({
         successHidden: true
     },
     getUserInfo: function() {
-        var that = this;
-        //调用登录接口
+        const that = this;
         wx.login({
             success: function() {
                 wx.getUserInfo({
@@ -39,7 +38,7 @@ Page({
         });
     },
     formSubmit: function(e) {
-        var that = this;
+        const that = this;
         var feedback = e.detail.value.feedback;
         if (!feedback) {
             this.setData({
@@ -79,4 +78,4 @@ Page({
             successHidden: true
         });
     }
-});
+})

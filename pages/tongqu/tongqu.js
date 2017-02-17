@@ -35,7 +35,7 @@ Page({
         });
     },
     fetchData: function(data) {
-        var that = this;
+        const that = this;
         this.setData({
             moreHidden: false
         });
@@ -73,4 +73,4 @@ Page({
             order: this.data.order
         });
     }
-});
+})
