@@ -1,9 +1,10 @@
 {
     "pages": [
         "pages/tongqu/tongqu",
+        "pages/more/more",
+        "pages/detail/detail",
         "pages/2048/2048",
-        "pages/about/about",
-        "pages/detail/detail"
+        "pages/about/about"
     ],
     "window": {
         "navigationBarTextStyle": "black",
@@ -23,16 +24,10 @@
                 "selectedIconPath": "images/icon_tongqu_on.png"
             },
             {
-                "pagePath": "pages/2048/2048",
-                "text": "2048",
-                "iconPath": "images/icon_2048_off.png",
-                "selectedIconPath": "images/icon_2048_on.png"
-            },
-            {
-                "pagePath": "pages/about/about",
+                "pagePath": "pages/more/more",
                 "text": "关于",
-                "iconPath": "images/icon_about_off.png",
-                "selectedIconPath": "images/icon_about_on.png"
+                "iconPath": "images/icon_more_off.png",
+                "selectedIconPath": "images/icon_more_on.png"
             }
         ]
     },
@@ -41,6 +36,5 @@
         "connectSocket": 10000,
         "uploadFile": 10000,
         "downloadFile": 10000
-    },
-    "debug": "true"
+    }
 }

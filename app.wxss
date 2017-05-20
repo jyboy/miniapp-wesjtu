@@ -1,8 +1,12 @@
 page {
     height: 100%;
+    font-family: "Helvetica Neue", "Hiragino Sans GB", "WenQuanYi Micro Hei", "Microsoft Yahei", sans-serif;
 }
 view {
     box-sizing: border-box;
+}
+.display-none {
+    display: none !important;
 }
 .act-status {
     display: flex;
@@ -39,14 +43,12 @@ view {
 .act-location,
 .act-source {
     display: flex;
-
+    align-items: center;
     color: #353535;
-}
-.act-time {
-    min-height: 17px;
 }
 .act-time-text,
 .act-location-text,
 .act-source-text {
     margin-left: 5px;
+    display: flex;
 }

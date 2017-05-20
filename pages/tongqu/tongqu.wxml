@@ -1,60 +1,60 @@
 <view class="tongqu-main">
-  <view class="top-bar">
-    <view class="top-bar-item {{hot}}" id="hot" catchtap="onTapTag"><view class="top-bar-item-wrapper">热门活动</view></view>
-    <view class="top-bar-item {{new}}" id="new" catchtap="onTapTag"><view class="top-bar-item-wrapper">最新活动</view></view>
-  </view>
-  <scroll-view class="acts-list" scroll-y="true" bindscrolltolower="lower">
-    <block wx:for="{{actsList}}">
-      <view class="act-item" index="{{index}}" id="{{item.actid}}" catchtap="redictDetail">
-        <view class="act-left">
-          <view class="act-left-wrapper">
-            <image class="act-poster" src="{{item.poster}}"></image>
-          </view>
-        </view>
-        <view class="act-right">
-          <view class="act-right-wrapper">
-            <view class="act-top">
-              <view class="act-name"><view class="act-name-wrapper">{{item.name}}</view></view>
-              <view class="act-status act-status-user {{item.status_style}}">{{item.status}}</view>
-            </view>
-            <view class="act-middle">
-              <view class="act-middle-wrapper">
-                <view class="act-time">
-                  <image class="act-time-icon" src="/images/icon_tongqu_time.png"></image>
-                  <view class="act-time-text">{{item.time}}</view>
-                </view>
-                <view class="act-location">
-                  <image class="act-location-icon" src="/images/icon_tongqu_location.png"></image>
-                  <view class="act-location-text"><view class="act-location-text-wrapper">{{item.location}}</view></view>
-                </view>
-                <view class="act-source">
-                  <image class="act-source-icon" src="/images/icon_tongqu_source.png"></image>
-                  <view class="act-source-text"><view class="act-source-text-wrapper">{{item.source}}</view></view>
-                </view>
-              </view>
-            </view>
-            <view class="act-bottom">
-              <view class="act-views">
-                <view class="act-views-wrapper">
-                  <image class="act-views-icon" src="/images/icon_tongqu_views.png"></image>
-                  <view class="act-views-text">{{item.views}}</view>
-                </view>
-              </view>
-              <view class="act-members">
-                <view class="act-members-wrapper">
-                  <image class="act-members-icon" src="/images/icon_tongqu_members.png"></image>
-                  <view class="act-members-text">{{item.members}}</view>
-                </view>
-              </view>
-            </view>
-          </view>
-        </view>
-      </view>
-    </block>
-    <view class="load-more" hidden="{{moreHidden}}">
-      <view class="load-content">
-          <text class="weui-loading"></text><text class="loading-text">玩命加载中</text>
-      </view>
+    <view class="top-bar">
+        <view class="top-bar-item {{new}}" id="new" catchtap="onTapTag"><view class="top-bar-item-wrapper">最新活动</view></view>
+        <view class="top-bar-item {{hot}}" id="hot" catchtap="onTapTag"><view class="top-bar-item-wrapper">热门活动</view></view>
     </view>
-  </scroll-view>
+    <scroll-view class="acts-list" scroll-y="true" bindscrolltolower="lower">
+        <block wx:for="{{actsList}}">
+            <view class="act-item" index="{{index}}" id="{{item.actid}}" catchtap="redictDetail">
+                <view class="act-left">
+                    <view class="act-left-wrapper">
+                        <image class="act-poster" src="{{item.poster}}"></image>
+                    </view>
+                </view>
+                <view class="act-right">
+                    <view class="act-right-wrapper">
+                        <view class="act-top">
+                            <view class="act-name"><view class="act-name-wrapper">{{item.name}}</view></view>
+                            <view class="act-status act-status-user {{item.status_style}}">{{item.status}}</view>
+                        </view>
+                        <view class="act-middle">
+                            <view class="act-middle-wrapper">
+                                <view class="act-time">
+                                    <image class="act-time-icon" src="/images/icon_tongqu_time.png"></image>
+                                    <view class="act-time-text">{{item.time}}</view>
+                                </view>
+                                <view class="act-location">
+                                    <image class="act-location-icon" src="/images/icon_tongqu_location.png"></image>
+                                    <view class="act-location-text"><view class="act-location-text-wrapper">{{item.location}}</view></view>
+                                </view>
+                                <view class="act-source">
+                                    <image class="act-source-icon" src="/images/icon_tongqu_source.png"></image>
+                                    <view class="act-source-text"><view class="act-source-text-wrapper">{{item.source}}</view></view>
+                                </view>
+                            </view>
+                        </view>
+                        <view class="act-bottom">
+                            <view class="act-views">
+                                <view class="act-views-wrapper">
+                                    <image class="act-views-icon" src="/images/icon_tongqu_views.png"></image>
+                                    <view class="act-views-text">{{item.views}}</view>
+                                </view>
+                            </view>
+                            <view class="act-members">
+                                <view class="act-members-wrapper">
+                                    <image class="act-members-icon" src="/images/icon_tongqu_members.png"></image>
+                                    <view class="act-members-text">{{item.members}}</view>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </block>
+        <view class="load-more" hidden="{{moreHidden}}">
+            <view class="load-content">
+                <text class="weui-loading"></text><text class="loading-text">玩命加载中</text>
+            </view>
+        </view>
+    </scroll-view>
 </view>

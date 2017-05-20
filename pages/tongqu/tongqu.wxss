@@ -1,8 +1,5 @@
 .tongqu-main {
-    width: 100%;
     height: 100%;
-
-    font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
 }
 .top-bar {
     position: fixed;
@@ -12,7 +9,7 @@
     width: 100%;
     height: 32px;
 
-    background: #fafafa;
+    background-color: #fafafa;
 }
 .top-bar-item {
     display: inline-block;
@@ -85,7 +82,7 @@
     box-sizing: border-box;
     padding: 5px;
     padding-left: 0;
-    width: 100%;
+    width: calc(100% - 90px);
     height: 100%;
 }
 .act-right-wrapper {
@@ -114,7 +111,7 @@
     max-width: calc(100% - 69px);
 
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 700;
     white-space: nowrap;
     text-overflow: ellipsis;
 
@@ -138,10 +135,13 @@
     justify-content: space-around;
 }
 .act-time-icon,
-.act-location-icon,
 .act-source-icon {
     width: 14px;
     height: 14px;
+}
+.act-location-icon {
+    width: 15px;
+    height: 15px;
 }
 .act-location-text-wrapper,
 .act-source-text-wrapper {
@@ -161,17 +161,20 @@
 }
 .act-views,
 .act-members {
-    width: 50%;
+    flex-grow: 1;
     height: 100%;
 }
 .act-views-wrapper,
 .act-members-wrapper {
     display: flex;
 }
-.act-views-icon,
-.act-members-icon {
+.act-views-icon {
     width: 15px;
     height: 15px;
+}
+.act-members-icon {
+    width: 14px;
+    height: 14px;
 }
 .act-views-text,
 .act-members-text {

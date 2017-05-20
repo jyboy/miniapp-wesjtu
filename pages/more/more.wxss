@@ -1,0 +1,88 @@
+.more-main {
+    height: 100%;
+
+    color: #353535;
+    background-color: #f3f3f3;
+}
+.more-main-wrap {
+    display: flex;
+
+    height: 100%;
+
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.about-area {
+    display: flex;
+
+    padding-top: 50px;
+
+    align-items: center;
+    flex-direction: column;
+}
+.about-avatar-wrap {
+    display: flex;
+
+    width: 80px;
+    height: 80px;
+
+    align-items: center;
+    justify-content: center;
+}
+.about-avatar {
+    width: 80px;
+    height: 80px;
+}
+.about-nickname {
+    margin-top: 10px;
+
+    font-size: 20px;
+}
+.content-area {
+    padding-bottom: 80px;
+    width: 100%;
+}
+.game, .about {
+    display: flex;
+
+    border-top: 1px solid #ececec;
+    border-bottom: 1px solid #ececec;
+    padding: 0 15px;
+    height: 40px;
+
+    font-size: 16px;
+
+    background-color: #fff;
+
+    align-items: center;
+    justify-content: space-between;
+}
+.about {
+    margin-top: 10px;
+}
+.navigator-arrow {
+    border-width: 2rpx 2rpx 0 0;
+    border-style: solid;
+    border-color: #888;
+    width: 8px;
+    height: 8px;
+
+    transform: matrix(.71, .71, -.71, .71, 0, 0);
+}
+.copyright {
+    display: flex;
+
+    padding-bottom: 10px;
+
+    font-size: 14px;
+
+    color: #b2b2b2;
+
+    align-items: flex-end;
+}
+.copyright:before {
+    margin-right: 5px;
+
+    content: "\00a9";
+}

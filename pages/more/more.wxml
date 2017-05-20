@@ -1,0 +1,19 @@
+<view class="more-main">
+    <view class="more-main-wrap">
+        <view class="about-area">
+            <view class="about-avatar-wrap">
+                <image class="about-avatar" src="../../images/icon_wesjtu.png"></image>
+            </view>
+            <text class="about-nickname">交大活动</text>
+        </view>
+        <view class="content-area">
+            <view class="game {{display_2048}}" catchtap="redirect2048">
+                <text>2048</text><text class="navigator-arrow"></text>
+            </view>
+            <view class="about" catchtap="redirectAbout">
+                <text>关于</text><text class="navigator-arrow"></text>
+            </view>
+        </view>
+        <view class="copyright">2017 biebuxin</view>
+    </view>
+</view>

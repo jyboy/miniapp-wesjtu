@@ -1,13 +1,12 @@
-.action_cavas {
+.action-main {
     display: flex;
 
-    width: 100%;
     height: 100%;
 
     flex-direction: column;
     justify-content: center;
 }
-.score {
+.score-wrap {
     display: flex;
 }
 .score-title {
@@ -16,13 +15,13 @@
     height: 150rpx;
 
     font-size: 2.4rem;
-    line-height: 140rpx;
+    line-height: 150rpx;
     text-align: center;
 
     color: #7c736a;
     background-color: #eee4da;
 
-    flex: 1;
+    flex-grow: 1;
 }
 .score-detail {
     margin: 40rpx 20rpx;
@@ -35,7 +34,7 @@
     color: #353535;
     background-color: #eee4da;
 
-    flex: 1;
+    flex-grow: 1;
 }
 .score-detail:last-child {
     margin-right: 40rpx;
@@ -47,7 +46,7 @@
     font-weight: 600;
     line-height: 45rpx;
 }
-.bc_cavas {
+.bc-wrap {
     display: flex;
 
     margin: 40rpx 40rpx;
@@ -63,7 +62,7 @@
     display: flex;
 }
 .bc_ {
-    margin: 6rpx 6rpx;
+    margin: 6rpx;
     width: 152rpx;
     height: 152rpx;
 
@@ -121,29 +120,12 @@
     color: #fff7eb;
     background-color: #eec22e;
 }
-.access-input {
-    box-sizing: border-box;
-    border: 1px solid #d9d9d9;
-    border-radius: 3px;
-    padding: 0 5px;
-    height: 34px;
-
-    font-size: 14px;
-
-    transition: all .2s ease;
+.btn-wrap {
+    padding: 40rpx;
 }
-.access-input-focus {
-    border-color: #0a4ca1;
-
-    box-shadow: 0 0 0 1px rgba(10, 76, 161, .2),
-    inset 0 0 0 1px rgba(10, 76, 161, .2);
-}
-.access-input-warn {
-    border-color: #e64340;
-
-    box-shadow: 0 0 0 1px rgba(230, 67, 64, .2),
-    inset 0 0 0 1px rgba(230, 67, 64, .2);
-}
-.modal {
-    font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+#btn {
+    font-size: 16px;
+    line-height: 2;
+    border-color: #b8af9e;
+    color: #7c736a;
 }

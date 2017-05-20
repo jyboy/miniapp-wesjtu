@@ -1,9 +1,9 @@
-var util = require('../../util/util.js');
+const util = require('../../util/util.js');
 
 Page({
     data: {
-        hot: 'top-bar-item-active',
-        new: '',
+        hot: '',
+        new: 'top-bar-item-active',
         actsList: [],
         offset: 0,
         order: '',
@@ -35,21 +35,19 @@ Page({
         });
     },
     fetchData: function(data) {
-        var that = this;
+        let that = this;
         this.setData({
             moreHidden: false
         });
         if (!data.offset) {
             data.offset = 0;
-        }
-        if (data.offset === 0) {
             this.setData({
                 actsList: []
             });
         }
         wx.request({
             url: util.getActs(data),
-            success: function(res) {
+            success: (res) => {
                 that.setData({
                     actsList: that.data.actsList.concat(res.data.actsList),
                     moreHidden: true
@@ -58,10 +56,8 @@ Page({
         });
     },
     redictDetail: function(e) {
-        var id = e.currentTarget.id,
-            url = '../detail/detail?id=' + id;
         wx.navigateTo({
-            url: url
+            url: `../detail/detail?id=${e.currentTarget.id}`
         });
     },
     lower: function(e) {
@@ -72,5 +68,11 @@ Page({
             offset: this.data.offset,
             order: this.data.order
         });
+    },
+    onShareAppMessage: function() {
+        return {
+            title: '同去 -「交大活动」',
+            path: '/pages/tongqu/tongqu'
+        }
     }
 });

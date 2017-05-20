@@ -10,7 +10,7 @@
                 <view class="act-name">{{name}}</view>
                 <view class="act-status act-status-user {{status_style}}">{{status}}</view>
             </view>
-        </view> 
+        </view>
     </view>
     <view class="detail-desc">
         <view class="detail-desc-wrapper">
@@ -30,11 +30,16 @@
     </view>
     <scroll-view class="act-contents" scroll-y="true">
         <block wx:for="{{actContents}}">
-            <view wx:if="{{item.viewIf}}" class="act-paragraph">
+            <view wx:if="{{item.textIf || item.imageIf}}" class="act-paragraph">
                 <text wx:if="{{item.textIf}}" class="act-text">{{item.text}}</text>
-                <view wx:if="{{item.imageIf}}" class="{{item.imageCenter}}"><image mode="aspectFit" src="{{item.image}}"></image></view>
+                <view wx:if="{{item.imageIf}}" class="image-center"><image mode="aspectFit" src="{{item.image}}" id="{{item.image}}" catchtap="previewImg"></image></view>
             </view>
         </block>
+        <view class="act-end">
+            <view class="act-end-line"><view class="act-end-line-wrap"></view></view>
+            <view class="act-end-text">完</view>
+            <view class="act-end-line"><view class="act-end-line-wrap"></view></view>
+        </view>
     </scroll-view>
     <loading hidden="{{hidden}}">
         加载中...
