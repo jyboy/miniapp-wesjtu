@@ -22,8 +22,10 @@
     </view>
 </view>
 <modal class="modal" confirm-text="吼啊" cancel-text="不吼" hidden="{{failHidden}}" bindconfirm="modalConfirm" bindcancel="modalCancle">
-    <view>图样图森破！</view><view>重新开始，吼不吼啊？</view>
+    <view>图样图森破！</view>
+    <view>重新开始，吼不吼啊？</view>
 </modal>
 <modal class="modal" confirm-text="吼啊" cancel-text="不吼" hidden="{{successHidden}}" bindconfirm="modalConfirm" bindcancel="modalCancle">
-    <view>比一般人不知高到哪里去！</view><view>再来一次，吼不吼啊？</view>
+    <view>比一般人不知高到哪里去！</view>
+    <view>再来一次，吼不吼啊？</view>
 </modal>

@@ -56,4 +56,4 @@ Page({
             path: `/pages/detail/detail?id=${this.data.id}`
         }
     }
-});
+})
