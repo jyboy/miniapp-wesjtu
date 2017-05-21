@@ -1,7 +1,7 @@
 .more-main {
     height: 100%;
 
-    color: #353535;
+    color: #333;
     background-color: #f3f3f3;
 }
 .more-main-wrap {
@@ -37,13 +37,14 @@
 .about-nickname {
     margin-top: 10px;
 
-    font-size: 20px;
+    font-size: 22px;
 }
 .content-area {
     padding-bottom: 80px;
     width: 100%;
 }
-.game, .about {
+.game,
+.about {
     display: flex;
 
     border-top: 1px solid #ececec;

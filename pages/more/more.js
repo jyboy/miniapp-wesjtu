@@ -9,14 +9,10 @@ Page({
             display_2048: app.isApproved ? '' : 'display-none'
         });
     },
-    redirect2048: (e) => {
+    redirect: (e) => {
+        let page = e.currentTarget.dataset.page;
         wx.navigateTo({
-            url: '../2048/2048'
-        });
-    },
-    redirectAbout: (e) => {
-        wx.navigateTo({
-            url: '../about/about'
+            url: `../${page}/${page}`
         });
     }
 });

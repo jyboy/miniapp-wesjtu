@@ -21,7 +21,7 @@
 
     font-size: 12px;
 
-    color: #454545;
+    color: #333;
 
     transition: font-size .3s;
 }
@@ -57,7 +57,7 @@
 
     font-size: 12px;
 
-    color: #353535;
+    color: #333;
     background-color: #fff;
 }
 .act-left {
@@ -123,7 +123,7 @@
 }
 .act-middle {
     width: 100%;
-    height: calc(100% - 35px);
+    height: calc(100% - 38px);
 }
 .act-middle-wrapper {
     display: flex;
@@ -157,16 +157,19 @@
     display: flex;
 
     width: 100%;
-    height: 15px;
+    height: 18px;
 }
 .act-views,
 .act-members {
-    flex-grow: 1;
     height: 100%;
+
+    flex-grow: 1;
 }
 .act-views-wrapper,
 .act-members-wrapper {
     display: flex;
+
+    align-items: center;
 }
 .act-views-icon {
     width: 15px;

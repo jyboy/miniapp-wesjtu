@@ -1,0 +1,41 @@
+.about-main {
+    padding: 20px;
+    min-height: 100%;
+
+    font-size: 14px;
+
+    background-color: #fff;
+}
+.about-main-wrap {
+    height: 100%;
+}
+.about {
+    line-height: 1.4;
+}
+.about-title {
+    border-bottom: 1px solid #ececec;
+    padding-bottom: 5px;
+
+    font-weight: 700;
+
+    color: #333;
+}
+.about-paragraph {
+    margin-top: 5px;
+
+    text-align: justify;
+    word-wrap: break-word;
+    word-break: break-all;
+
+    color: #666;
+}
+.about-paragraph:last-child {
+    padding-bottom: 10px;
+}
+.about-disclaimer-title,
+.about-disclaimer-paragraph {
+    color: #b2b2b2;
+}
+.underline {
+    text-decoration: underline;
+}
