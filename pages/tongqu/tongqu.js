@@ -71,7 +71,7 @@ Page({
     },
     onShareAppMessage: function() {
         return {
-            title: '同去 -「交大活动」',
+            title: '同去 -「我交」',
             path: '/pages/tongqu/tongqu'
         }
     }

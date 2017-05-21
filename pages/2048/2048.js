@@ -458,7 +458,7 @@ Page({
     },
     onShareAppMessage: function() {
         return {
-            title: '2048 -「交大活动」',
+            title: '2048 -「我交」',
             path: '/pages/2048/2048'
         }
     }

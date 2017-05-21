@@ -43,7 +43,7 @@
     line-height: 80rpx;
 }
 .score-number {
-    font-weight: 600;
+    font-weight: 700;
     line-height: 45rpx;
 }
 .bc-wrap {
