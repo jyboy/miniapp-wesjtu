@@ -6,11 +6,11 @@
 
 ## Screenshots
 
-<img src="https://raw.githubusercontent.com/jyboy/miniapp-wesjtu/master/screenshots/tongqu.jpg" alt="tongqu" style="max-width: 320px;">
+<img src="https://raw.githubusercontent.com/jyboy/miniapp-wesjtu/master/screenshots/tongqu.jpg" alt="tongqu" style="width: 320px;">
 
-<img src="https://raw.githubusercontent.com/jyboy/miniapp-wesjtu/master/screenshots/detail.jpg" alt="detail" style="max-width: 320px;">
+<img src="https://raw.githubusercontent.com/jyboy/miniapp-wesjtu/master/screenshots/detail.jpg" alt="detail" style="width: 320px;">
 
-<img src="https://raw.githubusercontent.com/jyboy/miniapp-wesjtu/master/screenshots/more.jpg" alt="more" style="max-width: 320px;">
+<img src="https://raw.githubusercontent.com/jyboy/miniapp-wesjtu/master/screenshots/more.jpg" alt="more" style="width: 320px;">
 
 ## License
 
