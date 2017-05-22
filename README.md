@@ -1,18 +1,16 @@
 # miniapp-wesjtu
 
-『我交』是一个微信小程序，可以看交大[同去网](https://tongqu.me/)上的活动信息，也可以玩交大版的2048。
+**我交 (WeSJTU)** 是个微信小程序，旨在汇聚我交最新最热的校园活动信息，为我交同学提供可浏览丰富校园活动的便捷服务。
+
+![qrcode](https://raw.githubusercontent.com/jyboy/miniapp-wesjtu/master/screenshots/qrcode.jpg)
 
 ## Screenshots
 
-![about](https://raw.githubusercontent.com/jyboy/miniapp-wesjtu/master/screenshots/screenshot-1.jpg)
+<img src="https://raw.githubusercontent.com/jyboy/miniapp-wesjtu/master/screenshots/tongqu.jpg" alt="tongqu" style="max-width: 320px;">
 
-![tongqu](https://raw.githubusercontent.com/jyboy/miniapp-wesjtu/master/screenshots/screenshot-2.jpg)
+<img src="https://raw.githubusercontent.com/jyboy/miniapp-wesjtu/master/screenshots/detail.jpg" alt="detail" style="max-width: 320px;">
 
-![tongqu-detail](https://raw.githubusercontent.com/jyboy/miniapp-wesjtu/master/screenshots/screenshot-3.jpg)
-
-![2048-entry](https://raw.githubusercontent.com/jyboy/miniapp-wesjtu/master/screenshots/screenshot-4.jpg)
-
-![2048](https://raw.githubusercontent.com/jyboy/miniapp-wesjtu/master/screenshots/screenshot-5.jpg)
+<img src="https://raw.githubusercontent.com/jyboy/miniapp-wesjtu/master/screenshots/more.jpg" alt="more" style="max-width: 320px;">
 
 ## License
 

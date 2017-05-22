@@ -7,7 +7,7 @@
             <text class="about-nickname">我交</text>
         </view>
         <view class="content-area">
-            <view class="game {{display_2048}}" data-page="2048" catchtap="redirect">
+            <view class="pow211 {{display_pow211}}" data-page="pow211" catchtap="redirect">
                 <text>2048</text><text class="navigator-arrow"></text>
             </view>
             <view class="about" data-page="about" catchtap="redirect">

@@ -459,7 +459,7 @@ Page({
     onShareAppMessage: function() {
         return {
             title: '2048 -「我交」',
-            path: '/pages/2048/2048'
+            path: '/pages/pow211/pow211'
         }
     }
 });

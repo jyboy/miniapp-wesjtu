@@ -6,12 +6,12 @@ Page({
         new: 'top-bar-item-active',
         actsList: [],
         offset: 0,
-        order: '',
+        order: 'act.create_time',
         moreHidden: true
     },
     onLoad: function() {
         this.fetchData({
-            order: ''
+            order: this.data.order
         });
     },
     onTapTag: function(e) {

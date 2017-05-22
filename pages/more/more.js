@@ -2,11 +2,11 @@ const app = getApp();
 
 Page({
     data: {
-        display_2048: 'display-none'
+        display_pow211: 'display-none'
     },
     onLoad: function() {
         this.setData({
-            display_2048: app.isApproved ? '' : 'display-none'
+            display_pow211: app.isApproved ? '' : 'display-none'
         });
     },
     redirect: (e) => {

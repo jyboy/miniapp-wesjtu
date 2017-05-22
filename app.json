@@ -3,7 +3,7 @@
         "pages/tongqu/tongqu",
         "pages/more/more",
         "pages/detail/detail",
-        "pages/2048/2048",
+        "pages/pow211/pow211",
         "pages/about/about"
     ],
     "window": {
