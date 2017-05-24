@@ -9,7 +9,7 @@ Page({
             display_summary: app.isApproved ? '' : 'display-none'
         });
     },
-    copy: function(e) {
+    copy: (e) => {
         let href = e.currentTarget.dataset.href;
         wx.setClipboardData({
             data: href,

@@ -128,7 +128,7 @@ Page({
                 return this.mergetop();
             case 'bottom':
                 return this.mergebottom();
-            default:
+            default: ;
         }
     },
     // 左划
@@ -456,7 +456,7 @@ Page({
             }
         });
     },
-    onShareAppMessage: function() {
+    onShareAppMessage: () => {
         return {
             title: '2048 -「我交」',
             path: '/pages/pow211/pow211'

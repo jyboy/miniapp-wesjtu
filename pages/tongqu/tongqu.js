@@ -55,7 +55,7 @@ Page({
             }
         });
     },
-    redictDetail: function(e) {
+    redictDetail: (e) => {
         wx.navigateTo({
             url: `../detail/detail?id=${e.currentTarget.id}`
         });
@@ -69,7 +69,7 @@ Page({
             order: this.data.order
         });
     },
-    onShareAppMessage: function() {
+    onShareAppMessage: () => {
         return {
             title: '同去 -「我交」',
             path: '/pages/tongqu/tongqu'
