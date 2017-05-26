@@ -17,7 +17,7 @@
             </view>
         </view>
         <view class="btn-wrap">
-            <button type="default" plain="true" loading="{{btnLoading}}" id="btn">分<text class="display-none">苟</text>享</button>
+            <button plain="true" loading="{{btnLoading}}" id="btn">分<text class="display-none">苟</text>享</button>
         </view>
     </view>
 </view>

@@ -40,6 +40,9 @@
             <view class="act-end-text">完</view>
             <view class="act-end-line"><view class="act-end-line-wrap"></view></view>
         </view>
+        <view class="btn-wrap {{display_register}}">
+            <button type="primary" catchtap="register">{{regIncludes ? '取消预约' : '预约'}}</button>
+        </view>
     </scroll-view>
     <loading hidden="{{hidden}}">
         加载中...

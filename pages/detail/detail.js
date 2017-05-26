@@ -1,3 +1,4 @@
+const app = getApp();
 const util = require('../../util/util.js');
 
 Page({
@@ -12,13 +13,24 @@ Page({
         actContents: [],
         images: [],
         hidden: true,
-        id: 0
+        id: 0,
+        regArr: [],
+        regIncludes: false,
+        display_register: true
     },
     onLoad: function(options) {
         this.fetchData(options.id);
         this.setData({
-            id: options.id
+            id: options.id,
+            display_register: app.isApproved ? 'display-none' : ''
         });
+        let regArr = wx.getStorageSync('regArr');
+        if (regArr) {
+            this.setData({
+                regIncludes: regArr.includes(options.id),
+                regArr: regArr.split(',')
+            });
+        }
     },
     fetchData: function(id) {
         let that = this;
@@ -48,6 +60,28 @@ Page({
         wx.previewImage({
             current: e.currentTarget.id,
             urls: this.data.images
+        });
+    },
+    register: function() {
+        let regArr = this.data.regArr;
+        if (this.data.regIncludes) {
+            regArr.splice(regArr.indexOf(this.data.id), 1);
+        } else {
+            regArr.push(this.data.id);
+        }
+        this.setData({
+            regIncludes: !this.data.regIncludes,
+            regArr: regArr
+        });
+        wx.setStorage({
+            key: 'regArr',
+            data: regArr.join(),
+            success: () => {
+                wx.showToast({
+                    title: this.data.regIncludes ? '预约成功' : '取消预约成功',
+                    duration: 1000
+                });
+            }
         });
     },
     onShareAppMessage: () => {
