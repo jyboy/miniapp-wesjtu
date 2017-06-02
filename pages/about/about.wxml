@@ -16,7 +16,7 @@
         </view>
         <view class="about about-summary {{display_summary}}">
             <view class="about-title">最后想说的</view>
-            <view class="about-paragraph">很惭愧，就做了一点微小的工作，还希望大家多多支持</view>
+            <view class="about-paragraph">很惭愧，就做了一点微小的工作，还望大家多多支持</view>
         </view>
         <view class="about about-disclaimer">
             <view class="about-title about-disclaimer-title">最后该说的</view>
