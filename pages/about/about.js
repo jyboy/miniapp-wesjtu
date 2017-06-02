@@ -13,7 +13,7 @@ Page({
         let href = e.currentTarget.dataset.href;
         wx.setClipboardData({
             data: href,
-            success: function() {
+            success: () => {
                 wx.showToast({
                     title: '已复制到剪贴板',
                     duration: 1000
