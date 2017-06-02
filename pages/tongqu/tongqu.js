@@ -35,7 +35,6 @@ Page({
         });
     },
     fetchData: function(data) {
-        let that = this;
         this.setData({
             moreHidden: false
         });
@@ -48,8 +47,8 @@ Page({
         wx.request({
             url: util.getActs(data),
             success: (res) => {
-                that.setData({
-                    actsList: that.data.actsList.concat(res.data.actsList),
+                this.setData({
+                    actsList: this.data.actsList.concat(res.data.actsList),
                     moreHidden: true
                 });
             }

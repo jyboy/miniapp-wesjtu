@@ -21,7 +21,6 @@ Page({
         });
     },
     fetchData: function(id) {
-        let that = this;
         this.setData({
             hidden: false
         });
@@ -29,7 +28,7 @@ Page({
             url: util.getActByID(id),
             success: (res) => {
                 let data = res.data;
-                that.setData({
+                this.setData({
                     poster: data.poster,
                     name: data.name,
                     status: data.status,

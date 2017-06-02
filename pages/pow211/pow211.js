@@ -437,7 +437,6 @@ Page({
         });
     },
     previewShare: function() {
-        let that = this;
         let score = this.data.score;
         let maxScore = this.data.maxScore;
         let matrix = encodeURIComponent(JSON.stringify(this.data.wordnumbers));
