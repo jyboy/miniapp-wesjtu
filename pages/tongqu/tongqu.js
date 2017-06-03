@@ -15,7 +15,7 @@ Page({
         });
     },
     onTapTag: function(e) {
-        if (e.currentTarget.id == 'hot') {
+        if (e.currentTarget.id === 'hot') {
             this.setData({
                 hot: 'top-bar-item-active',
                 new: '',

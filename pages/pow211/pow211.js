@@ -344,13 +344,13 @@ Page({
         }
         for (let i = 0; i < 3; i++) {
             for (let j = 0; j < 3; j++) {
-                if (arr[i][j].number == arr[i + 1][j].number || arr[i][j].number == arr[i][j + 1].number) return;
+                if (arr[i][j].number === arr[i + 1][j].number || arr[i][j].number === arr[i][j + 1].number) return;
             }
         }
 
         for (let j = 0; j < 3; j++) {
-            if (arr[3][j].number == arr[3][j + 1].number) return;
-            if (arr[j][3].number == arr[j + 1][3].number) return;
+            if (arr[3][j].number === arr[3][j + 1].number) return;
+            if (arr[j][3].number === arr[j + 1][3].number) return;
         }
         this.setData({
             failHidden: false
@@ -360,7 +360,7 @@ Page({
         let arr = this.data.wordnumbers;
         for (let i = 0; i < 4; i++) {
             for (let j = 0; j < 4; j++) {
-                if (arr[i][j].number == 16384) {
+                if (arr[i][j].number === 16384) {
                     this.setData({
                         successHidden: false
                     });
