@@ -116,7 +116,7 @@
     color: #fff7eb;
     background-color: #edc53f;
 }
-.bc_2048 {
+.bc_2048, .bc_4096, .bc_8192, .bc_16384 {
     color: #fff7eb;
     background-color: #eec22e;
 }
