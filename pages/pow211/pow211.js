@@ -461,6 +461,7 @@ Page({
         });
     },
     previewShare: function() {
+        let type = this.data.pow211Type;
         let score = this.data.score;
         let maxScore = this.data.maxScore;
         let matrix = encodeURIComponent(JSON.stringify(this.data.wordnumbers));
@@ -468,7 +469,7 @@ Page({
             btnLoading: true
         });
         wx.request({
-            url: util.getShare(score, maxScore, matrix),
+            url: util.getShare(type, score, maxScore, matrix),
             success: (res) => {
                 this.setData({
                     btnLoading: false

@@ -16,6 +16,6 @@ module.exports = {
         return HOST_URL + GET_ACT_BY_ID + '?id=' + id;
     },
     getShare: (score, maxScore, matrix) => {
-        return HOST_URL + GET_SHARE + '?score=' + score + '&maxScore=' + maxScore + '&matrix=' + matrix;
+        return HOST_URL + GET_SHARE + '?type=' + type + '&score=' + score + '&maxScore=' + maxScore + '&matrix=' + matrix;
     }
 };
