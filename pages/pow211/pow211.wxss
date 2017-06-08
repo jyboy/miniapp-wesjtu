@@ -62,15 +62,23 @@
     display: flex;
 }
 .bc_ {
+    display: flex;
+
     margin: 6rpx;
     width: 152rpx;
     height: 152rpx;
 
-    font-size: 60rpx;
-    line-height: 152rpx;
-    text-align: center;
-
     color: #fff7eb;
+
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.bc__ {
+    font-size: 60rpx;
+}
+.bc___ {
+    font-size: 40rpx;
 }
 .bc_0 {
     color: #ccc0b2;
@@ -116,7 +124,10 @@
     color: #fff7eb;
     background-color: #edc53f;
 }
-.bc_2048, .bc_4096, .bc_8192, .bc_16384 {
+.bc_2048,
+.bc_4096,
+.bc_8192,
+.bc_16384 {
     color: #fff7eb;
     background-color: #eec22e;
 }

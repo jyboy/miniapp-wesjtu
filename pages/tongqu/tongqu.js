@@ -1,4 +1,4 @@
-const util = require('../../util/util.js');
+const util = require('../../utils/util');
 
 Page({
     data: {

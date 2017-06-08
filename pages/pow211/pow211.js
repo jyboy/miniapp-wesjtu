@@ -1,4 +1,5 @@
-const util = require('../../util/util.js');
+const util = require('../../utils/util');
+const base64 = require('../../utils/base64.min');
 
 Page({
     data: {
@@ -9,77 +10,143 @@ Page({
         endx: 0,
         endy: 0,
         direction: '',
-        wordnumbers: [
-            [{
-                number: 0,
-                word: '他'
-            }, {
-                number: 0,
-                word: '他'
-            }, {
-                number: 2,
-                word: '苟'
-            }, {
-                number: 2,
-                word: '苟'
-            }],
-            [{
-                number: 0,
-                word: '他'
-            }, {
-                number: 2,
-                word: '苟'
-            }, {
-                number: 4,
-                word: '利'
-            }, {
-                number: 0,
-                word: '他'
-            }],
-            [{
-                number: 0,
-                word: '他'
-            }, {
-                number: 4,
-                word: '利'
-            }, {
-                number: 0,
-                word: '他'
-            }, {
-                number: 0,
-                word: '他'
-            }],
-            [{
-                number: 0,
-                word: '他'
-            }, {
-                number: 0,
-                word: '他'
-            }, {
-                number: 0,
-                word: '他'
-            }, {
-                number: 0,
-                word: '他'
-            }]
-        ],
+        wordsArray: [],
+        wordnumbers: [],
         failHidden: true,
         successHidden: true,
-        btnLoading: false
+        btnLoading: false,
+        pow211Type: 0
     },
     onLoad: function() {
         let maxScore = wx.getStorageSync('maxScore');
-        if (!maxScore) maxScore = 0;
+        let pow211Type = wx.getStorageSync('pow211Type');
+        maxScore = maxScore ? +maxScore : 0
+        pow211Type = pow211Type ? parseInt(pow211Type) : 0;
+        this.initPow211(pow211Type);
         this.setData({
-            maxScore: maxScore
+            maxScore: maxScore,
+            pow211Type: pow211Type
+        });
+    },
+    initPow211: function(pow211Type) {
+        let wordsArray = pow211Type ? [
+            ['他的', '生平'],
+            ['扬州', '江少'],
+            [base64.decode('5Lit5aSu'), '大学'], // 中央
+            ['交通', '大学'],
+            ['长春', '一汽'],
+            ['上海', '市长'],
+            ['市委', '书记'],
+            ['螳臂', '当车'],
+            ['苟利', '国家'],
+            ['如履', '薄冰'],
+            ['九八', '抗洪'],
+            [base64.decode('5LiJ5Liq'), '代表'], // 三个
+            ['谈笑', '风生'],
+            ['怒斥', '港记'],
+            ['很', '惭愧']
+        ] : [
+            ['他', ''],
+            ['苟', ''],
+            ['利', ''],
+            ['国', ''],
+            ['家', ''],
+            ['生', ''],
+            ['死', ''],
+            ['以', ''],
+            ['岂', ''],
+            ['因', ''],
+            ['祸', ''],
+            ['福', ''],
+            ['避', ''],
+            ['趋', ''],
+            ['之', '']
+        ];
+        let wordnumbers = [
+            [{
+                number: 0,
+                word: wordsArray[0][0],
+                word2: wordsArray[0][1]
+            }, {
+                number: 0,
+                word: wordsArray[0][0],
+                word2: wordsArray[0][1]
+            }, {
+                number: 2,
+                word: wordsArray[1][0],
+                word2: wordsArray[1][1]
+            }, {
+                number: 2,
+                word: wordsArray[1][0],
+                word2: wordsArray[1][1]
+            }],
+            [{
+                number: 0,
+                word: wordsArray[0][0],
+                word2: wordsArray[0][1]
+            }, {
+                number: 2,
+                word: wordsArray[1][0],
+                word2: wordsArray[1][1]
+            }, {
+                number: 4,
+                word: wordsArray[2][0],
+                word2: wordsArray[2][1]
+            }, {
+                number: 0,
+                word: wordsArray[0][0],
+                word2: wordsArray[0][1]
+            }],
+            [{
+                number: 0,
+                word: wordsArray[0][0],
+                word2: wordsArray[0][1]
+            }, {
+                number: 4,
+                word: wordsArray[2][0],
+                word2: wordsArray[2][1]
+            }, {
+                number: 0,
+                word: wordsArray[0][0],
+                word2: wordsArray[0][1]
+            }, {
+                number: 0,
+                word: wordsArray[0][0],
+                word2: wordsArray[0][1]
+            }],
+            [{
+                number: 0,
+                word: wordsArray[0][0],
+                word2: wordsArray[0][1]
+            }, {
+                number: 0,
+                word: wordsArray[0][0],
+                word2: wordsArray[0][1]
+            }, {
+                number: 0,
+                word: wordsArray[0][0],
+                word2: wordsArray[0][1]
+            }, {
+                number: 0,
+                word: wordsArray[0][0],
+                word2: wordsArray[0][1]
+            }]
+        ];
+        this.setData({
+            score: 0,
+            wordsArray: wordsArray,
+            wordnumbers: wordnumbers
         });
     },
     storeScore: function() {
-        if (this.data.maxScore < this.data.score) {
+        if (this.data.score > this.data.maxScore) {
             this.setData({
                 maxScore: this.data.score
             });
-            wx.setStorageSync('maxScore', this.data.maxScore);
+            wx.setStorage({
+                key: 'maxScore',
+                data: this.data.maxScore
+            });
         }
     },
     tapStart: function(e) {
@@ -97,6 +164,16 @@ Page({
     tapEnd: function(e) {
         if (e.target.id === 'btn') {
             this.previewShare();
+        } else if (e.target.id === 'name') {
+            let pow211Type = this.data.pow211Type ? 0 : 1;
+            this.initPow211(pow211Type);
+            this.setData({
+                pow211Type: pow211Type
+            });
+            wx.setStorage({
+                key: 'pow211Type',
+                data: pow211Type
+            });
         } else {
             let herizontal = (this.data.endx) ? (this.data.endx - this.data.startx) : 0;
             let vertical = (this.data.endy) ? (this.data.endy - this.data.starty) : 0;
@@ -128,7 +205,8 @@ Page({
                 return this.mergetop();
             case 'bottom':
                 return this.mergebottom();
-            default: ;
+            default:
+                ;
         }
     },
     // 左划
@@ -303,14 +381,14 @@ Page({
         this.storeScore();
         return change;
     },
-    number2word: (arr) => {
+    number2word: function(arr) {
         let numbersArray = [0, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192, 16384];
-        let wordsArray = ['他', '苟', '利', '国', '家', '生', '死', '以', '岂', '因', '祸', '福', '避', '趋', '之'];
         let wordnumbers = arr;
         for (let i = 0; i < 4; i++) {
             for (let j = 0; j < 4; j++) {
                 let index = numbersArray.indexOf(wordnumbers[i][j].number);
-                wordnumbers[i][j].word = wordsArray[index];
+                wordnumbers[i][j].word = this.data.wordsArray[index][0];
+                wordnumbers[i][j].word2 = this.data.wordsArray[index][1];
             }
         }
         return wordnumbers;
@@ -370,62 +448,8 @@ Page({
         }
     },
     modalConfirm: function() {
+        this.initPow211(this.data.pow211Type);
         this.setData({
-            score: 0,
-            wordnumbers: [
-                [{
-                    number: 0,
-                    word: '他'
-                }, {
-                    number: 0,
-                    word: '他'
-                }, {
-                    number: 2,
-                    word: '苟'
-                }, {
-                    number: 2,
-                    word: '苟'
-                }],
-                [{
-                    number: 0,
-                    word: '他'
-                }, {
-                    number: 2,
-                    word: '苟'
-                }, {
-                    number: 4,
-                    word: '利'
-                }, {
-                    number: 0,
-                    word: '他'
-                }],
-                [{
-                    number: 0,
-                    word: '他'
-                }, {
-                    number: 4,
-                    word: '利'
-                }, {
-                    number: 0,
-                    word: '他'
-                }, {
-                    number: 0,
-                    word: '他'
-                }],
-                [{
-                    number: 0,
-                    word: '他'
-                }, {
-                    number: 0,
-                    word: '他'
-                }, {
-                    number: 0,
-                    word: '他'
-                }, {
-                    number: 0,
-                    word: '他'
-                }]
-            ],
             failHidden: true,
             successHidden: true
         });

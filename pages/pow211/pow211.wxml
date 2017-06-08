@@ -1,7 +1,7 @@
 <view class="action-main" catchtouchstart="tapStart" catchtouchmove="tapMove" catchtouchend="tapEnd">
     <view class="action-area">
         <view class="score-wrap">
-            <view class="score-title">苟</view>
+            <view class="score-title" id="name">{{pow211Type ? '扬' : '苟'}}</view>
             <view class="score-detail">
                 <view class="score-desc">SCORE</view>
                 <view class="score-number">{{score}}</view>
@@ -13,11 +13,11 @@
         </view>
         <view class="bc-wrap">
             <view class="bc" wx:for="{{wordnumbers}}" wx:for-item="row">
-                <view wx:for="{{row}}" class="bc_ bc_{{item.number}}">{{item.word}}</view>
+                <view wx:for="{{row}}" class="bc_ bc__{{pow211Type ? '_' : ''}} bc_{{item.number}}"><text>{{item.word}}</text><text class="display-none">二零四八</text><text>{{item.word2}}</text></view>
             </view>
         </view>
         <view class="btn-wrap">
-            <button plain="true" loading="{{btnLoading}}" id="btn">分<text class="display-none">苟</text>享</button>
+            <button plain="true" loading="{{btnLoading}}" id="btn">分<text class="display-none">二零四八</text>享</button>
         </view>
     </view>
 </view>
