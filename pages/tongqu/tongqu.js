@@ -72,6 +72,6 @@ Page({
         return {
             title: '同去 -「我交」',
             path: '/pages/tongqu/tongqu'
-        }
+        };
     }
 });
