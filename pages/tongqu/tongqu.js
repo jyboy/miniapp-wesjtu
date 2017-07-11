@@ -54,7 +54,7 @@ Page({
             }
         });
     },
-    redictDetail: (e) => {
+    navigateDetail: (e) => {
         wx.navigateTo({
             url: `../detail/detail?id=${e.currentTarget.id}`
         });
