@@ -2,7 +2,8 @@ const app = getApp();
 
 Page({
     data: {
-        display_pow211: 'display-none'
+        display_pow211: 'display-none',
+        current: (new Date()).getFullYear()
     },
     onLoad: function() {
         this.setData({

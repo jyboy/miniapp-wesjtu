@@ -480,7 +480,7 @@ Page({
             }
         });
     },
-    onShareAppMessage: () => {
+    onShareAppMessage: (res) => {
         return {
             title: '2048 -「我交」',
             path: '/pages/pow211/pow211'

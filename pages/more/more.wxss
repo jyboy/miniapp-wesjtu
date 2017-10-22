@@ -72,18 +72,9 @@
     transform: matrix(.71, .71, -.71, .71, 0, 0);
 }
 .copyright {
-    display: flex;
-
     padding-bottom: 10px;
 
     font-size: 14px;
 
     color: #b2b2b2;
-
-    align-items: flex-end;
-}
-.copyright:before {
-    margin-right: 5px;
-
-    content: "\00a9";
 }

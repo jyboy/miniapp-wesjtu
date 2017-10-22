@@ -83,7 +83,7 @@ Page({
             }
         });
     },
-    onShareAppMessage: function() {
+    onShareAppMessage: function(res) {
         return {
             title: '同去 -「我交」',
             path: `/pages/detail/detail?id=${this.data.id}`

@@ -68,7 +68,7 @@ Page({
             order: this.data.order
         });
     },
-    onShareAppMessage: () => {
+    onShareAppMessage: (res) => {
         return {
             title: '同去 -「我交」',
             path: '/pages/tongqu/tongqu'

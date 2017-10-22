@@ -16,6 +16,7 @@
     border-bottom: 1px solid #ececec;
     padding-bottom: 5px;
 
+    font-size: 15px;
     font-weight: 700;
 
     color: #333;
@@ -32,13 +33,14 @@
 .about-paragraph:last-child {
     padding-bottom: 10px;
 }
+.about-wechat {
+    text-align: center;
+}
+.about-wechat-qrcode {
+    width: 125px;
+    height: 125px;
+}
 .about-disclaimer-title,
 .about-disclaimer-paragraph {
-    color: #b2b2b2;
-}
-.underline {
-    text-decoration: underline;
-}
-.underline:hover {
-    color: #0a4ca1;
+    color: #ececec;
 }
