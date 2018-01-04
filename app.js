@@ -6,14 +6,9 @@ App({
         wx.request({
             url: util.getSignal(),
             success: (res) => {
-                if (parseInt(res.statusCode) === 200) {
+                if (res.statusCode == 200) {
                     this.isApproved = res.data.isApproved;
-                } else {
-                    this.isApproved = false;
                 }
-            },
-            fail: () => {
-                this.isApproved = false;
             }
         });
     }
