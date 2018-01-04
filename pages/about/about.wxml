@@ -5,10 +5,6 @@
             <view class="about-paragraph">我交 (WeSJTU) 是个微信小程序，旨在汇聚我交最新最热的校园活动信息，为我交同学提供可浏览丰富校园活动的便捷服务。</view>
             <view class="about-paragraph">我交小程序代码已开源，链接（点击复制）：<view><text class="underline" data-href="https://github.com/jyboy/miniapp-wesjtu" catchtap="copy">https://github.com/jyboy/miniapp-wesjtu</text></view></view>
         </view>
-        <view class="about about-me">
-            <view class="about-title">关于「我」</view>
-            <view class="about-paragraph">我交的研究生，专业机械，业余编程。</view>
-        </view>
         <view class="about about-biebuxin">
             <view class="about-title">关于「别不信」</view>
             <view class="about-paragraph">别不信是个微信公众号，微信搜索「别不信」或「biebuxin」即可。关注之后，可以实时获取饮水思源BBS、交大贴吧和同去网最新最热的信息等。</view>

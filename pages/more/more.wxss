@@ -78,3 +78,8 @@
 
     color: #b2b2b2;
 }
+.copyright:before {
+    margin-right: 5px;
+
+    content: "\00a9";
+}

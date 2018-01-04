@@ -33,6 +33,9 @@
 .about-paragraph:last-child {
     padding-bottom: 10px;
 }
+.underline {
+    text-decoration: underline;
+}
 .about-wechat {
     text-align: center;
 }
