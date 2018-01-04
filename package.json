@@ -1,7 +1,7 @@
 {
     "name": "wesjtu",
-    "version": "2.0.4",
-    "description": "Wechat mini program WeSJTU",
+    "version": "2.3.2",
+    "description": "Wechat mini app WeSJTU",
     "keywords": [
         "wxml",
         "wxss",

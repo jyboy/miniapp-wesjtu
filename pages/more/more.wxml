@@ -1,7 +1,7 @@
 <view class="more-main">
-    <view class="more-main-wrap">
+    <view class="more-main-wrapper">
         <view class="about-area">
-            <view class="about-avatar-wrap">
+            <view class="about-avatar-wrapper">
                 <image class="about-avatar" src="../../images/icon_wesjtu.png"></image>
             </view>
             <text class="about-nickname">我交</text>
@@ -14,6 +14,6 @@
                 <text>关于</text><text class="navigator-arrow"></text>
             </view>
         </view>
-        <view class="copyright">2017 biebuxin</view>
+        <view class="copyright">2017-{{curYear}} biebuxin</view>
     </view>
 </view>

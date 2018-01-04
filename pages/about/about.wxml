@@ -1,26 +1,25 @@
 <view class="about-main">
-    <view class="about-main-wrap">
+    <view class="about-main-wrapper">
         <view class="about about-wesjtu">
             <view class="about-title">关于「我交」</view>
-            <view class="about-paragraph">1. 我交 (WeSJTU) 是个微信小程序，旨在汇聚我交最新最热的校园活动信息，为我交同学提供可浏览丰富校园活动的便捷服务</view>
-            <view class="about-paragraph">2. 我交也是个开源项目，链接：<view><text class="underline" data-href="https://github.com/jyboy/miniapp-wesjtu" catchtap="copy">https://github.com/jyboy/miniapp-wesjtu</text></view></view>
+            <view class="about-paragraph">我交 (WeSJTU) 是个微信小程序，旨在汇聚我交最新最热的校园活动信息，为我交同学提供可浏览丰富校园活动的便捷服务。</view>
+            <view class="about-paragraph">我交小程序代码已开源，链接（点击复制）：<view><text class="underline" data-href="https://github.com/jyboy/miniapp-wesjtu" catchtap="copy">https://github.com/jyboy/miniapp-wesjtu</text></view></view>
         </view>
         <view class="about about-me">
             <view class="about-title">关于「我」</view>
-            <view class="about-paragraph">我交的研究生，专业机械，业余编程</view>
+            <view class="about-paragraph">我交的研究生，专业机械，业余编程。</view>
         </view>
         <view class="about about-biebuxin">
             <view class="about-title">关于「别不信」</view>
-            <view class="about-paragraph">1. 别不信是个微信公众号，微信搜索「别不信」或「biebuxin」即可查看。关注之后，可以实时获取饮水思源BBS、交大贴吧和同去网最新最热的信息等。更多神奇技能，等你Get</view>
-            <view class="about-paragraph">2. 别不信也是个人博客站点，主要记录一些技术方面的心得体会等，链接：<view><text class="underline" data-href="https://biebu.xin/" catchtap="copy">https://biebu.xin/</text></view></view>
+            <view class="about-paragraph">别不信是个微信公众号，微信搜索「别不信」或「biebuxin」即可。关注之后，可以实时获取饮水思源BBS、交大贴吧和同去网最新最热的信息等。</view>
         </view>
         <view class="about about-summary {{display_summary}}">
             <view class="about-title">最后想说的</view>
-            <view class="about-paragraph">很惭愧，就做了一点微小的工作，还望大家多多支持</view>
+            <view class="about-paragraph">很惭愧，就做了一点微小的工作，谢谢大家。</view>
         </view>
         <view class="about about-disclaimer">
             <view class="about-title about-disclaimer-title">最后该说的</view>
-            <view class="about-paragraph about-disclaimer-paragraph">我交 (WeSJTU) 不对校园活动信息的真实性和准确性负责，请自行判断</view>
+            <view class="about-paragraph about-disclaimer-paragraph">我交 (WeSJTU) 不对校园活动信息的真实性和准确性负责，请自行判断。</view>
         </view>
     </view>
 </view>

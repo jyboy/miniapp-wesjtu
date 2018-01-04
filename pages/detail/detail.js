@@ -18,7 +18,7 @@ Page({
         regIncludes: false,
         display_register: true
     },
-    onLoad: function(options) {
+    onLoad: function (options) {
         this.fetchData(options.id);
         this.setData({
             id: options.id,
@@ -32,7 +32,7 @@ Page({
             });
         }
     },
-    fetchData: function(id) {
+    fetchData: function (id) {
         this.setData({
             hidden: false
         });
@@ -55,13 +55,13 @@ Page({
             }
         });
     },
-    previewImg: function(e) {
+    previewImg: function (e) {
         wx.previewImage({
             current: e.currentTarget.id,
             urls: this.data.images
         });
     },
-    register: function() {
+    register: function () {
         let regArr = this.data.regArr;
         if (this.data.regIncludes) {
             regArr.splice(regArr.indexOf(this.data.id), 1);
@@ -83,7 +83,7 @@ Page({
             }
         });
     },
-    onShareAppMessage: function() {
+    onShareAppMessage: function () {
         return {
             title: '同去 -「我交」',
             path: `/pages/detail/detail?id=${this.data.id}`

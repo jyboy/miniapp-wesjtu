@@ -17,7 +17,7 @@ Page({
         btnLoading: false,
         pow211Type: 0
     },
-    onLoad: function() {
+    onLoad: function () {
         let maxScore = wx.getStorageSync('maxScore');
         let pow211Type = wx.getStorageSync('pow211Type');
         maxScore = maxScore ? +maxScore : 0
@@ -28,7 +28,7 @@ Page({
             pow211Type: pow211Type
         });
     },
-    initPow211: function(pow211Type) {
+    initPow211: function (pow211Type) {
         let wordsArray = pow211Type ? [
             ['他的', '生平'],
             ['扬州', '江少'],
@@ -46,22 +46,22 @@ Page({
             ['怒斥', '港记'],
             ['很', '惭愧']
         ] : [
-            ['他', ''],
-            ['苟', ''],
-            ['利', ''],
-            ['国', ''],
-            ['家', ''],
-            ['生', ''],
-            ['死', ''],
-            ['以', ''],
-            ['岂', ''],
-            ['因', ''],
-            ['祸', ''],
-            ['福', ''],
-            ['避', ''],
-            ['趋', ''],
-            ['之', '']
-        ];
+                ['他', ''],
+                ['苟', ''],
+                ['利', ''],
+                ['国', ''],
+                ['家', ''],
+                ['生', ''],
+                ['死', ''],
+                ['以', ''],
+                ['岂', ''],
+                ['因', ''],
+                ['祸', ''],
+                ['福', ''],
+                ['避', ''],
+                ['趋', ''],
+                ['之', '']
+            ];
         let wordnumbers = [
             [{
                 number: 0,
@@ -138,7 +138,7 @@ Page({
             wordnumbers: wordnumbers
         });
     },
-    storeScore: function() {
+    storeScore: function () {
         if (this.data.score > this.data.maxScore) {
             this.setData({
                 maxScore: this.data.score
@@ -149,19 +149,19 @@ Page({
             });
         }
     },
-    tapStart: function(e) {
+    tapStart: function (e) {
         this.setData({
             startx: e.touches[0].pageX,
             starty: e.touches[0].pageY
         });
     },
-    tapMove: function(e) {
+    tapMove: function (e) {
         this.setData({
             endx: e.touches[0].pageX,
             endy: e.touches[0].pageY
         });
     },
-    tapEnd: function(e) {
+    tapEnd: function (e) {
         if (e.target.id === 'btn') {
             this.previewShare();
         } else if (e.target.id === 'name') {
@@ -194,7 +194,7 @@ Page({
         return (vertical > 0) ? 'bottom' : 'top';
     },
 
-    mergeAll: function(dir) {
+    mergeAll: function (dir) {
         this.checkFail();
         switch (dir) {
             case 'left':
@@ -210,7 +210,7 @@ Page({
         }
     },
     // 左划
-    mergeleft: function() {
+    mergeleft: function () {
         let change = false;
         let arr = this.data.wordnumbers;
 
@@ -253,7 +253,7 @@ Page({
         return change;
     },
     // 右滑
-    mergeright: function() {
+    mergeright: function () {
         let change = false;
         let arr = this.data.wordnumbers;
 
@@ -296,7 +296,7 @@ Page({
         return change;
     },
     // 下划
-    mergebottom: function() {
+    mergebottom: function () {
         let change = false;
         let arr = this.data.wordnumbers;
 
@@ -339,7 +339,7 @@ Page({
         return change;
     },
     // 上滑
-    mergetop: function() {
+    mergetop: function () {
         let change = false;
         let arr = this.data.wordnumbers;
 
@@ -381,7 +381,7 @@ Page({
         this.storeScore();
         return change;
     },
-    number2word: function(arr) {
+    number2word: function (arr) {
         let numbersArray = [0, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192, 16384];
         let wordnumbers = arr;
         for (let i = 0; i < 4; i++) {
@@ -394,7 +394,7 @@ Page({
         return wordnumbers;
     },
     // 随机插入
-    randInsert: function() {
+    randInsert: function () {
         let arr = this.data.wordnumbers;
         // 随机2或4
         let num = Math.random() < 0.8 ? 2 : 4;
@@ -413,7 +413,7 @@ Page({
             wordnumbers: this.number2word(arr)
         });
     },
-    checkFail: function() {
+    checkFail: function () {
         let arr = this.data.wordnumbers;
         for (let i = 0; i < 4; i++) {
             for (let j = 0; j < 4; j++) {
@@ -434,7 +434,7 @@ Page({
             failHidden: false
         });
     },
-    checkSuccess: function() {
+    checkSuccess: function () {
         let arr = this.data.wordnumbers;
         for (let i = 0; i < 4; i++) {
             for (let j = 0; j < 4; j++) {
@@ -447,20 +447,20 @@ Page({
             }
         }
     },
-    modalConfirm: function() {
+    modalConfirm: function () {
         this.initPow211(this.data.pow211Type);
         this.setData({
             failHidden: true,
             successHidden: true
         });
     },
-    modalCancle: function() {
+    modalCancle: function () {
         this.setData({
             failHidden: true,
             successHidden: true
         });
     },
-    previewShare: function() {
+    previewShare: function () {
         let type = this.data.pow211Type;
         let score = this.data.score;
         let maxScore = this.data.maxScore;
@@ -480,10 +480,8 @@ Page({
             }
         });
     },
-    onShareAppMessage: () => {
-        return {
-            title: '2048 -「我交」',
-            path: '/pages/pow211/pow211'
-        };
-    }
+    onShareAppMessage: () => ({
+        title: '2048 -「我交」',
+        path: '/pages/pow211/pow211'
+    })
 });

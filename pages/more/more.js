@@ -2,11 +2,13 @@ const app = getApp();
 
 Page({
     data: {
-        display_pow211: 'display-none'
+        display_pow211: 'display-none',
+        curYear: '2018'
     },
-    onLoad: function() {
+    onLoad: function () {
         this.setData({
-            display_pow211: app.isApproved ? '' : 'display-none'
+            display_pow211: app.isApproved ? '' : 'display-none',
+            curYear: (new Date()).getFullYear()
         });
     },
     redirect: (e) => {

@@ -6,16 +6,8 @@ const GET_SHARE = '/getShare';
 
 module.exports = {
     HOST_URL: HOST_URL,
-    getSignal: () => {
-        return HOST_URL + GET_SIGNAL;
-    },
-    getActs: (obj) => {
-        return HOST_URL + GET_ACTS + '?offset=' + obj.offset + '&order=' + obj.order;
-    },
-    getActByID: (id) => {
-        return HOST_URL + GET_ACT_BY_ID + '?id=' + id;
-    },
-    getShare: (type, score, maxScore, matrix) => {
-        return HOST_URL + GET_SHARE + '?type=' + type + '&score=' + score + '&maxScore=' + maxScore + '&matrix=' + matrix;
-    }
+    getSignal: () => HOST_URL + GET_SIGNAL,
+    getActs: obj => HOST_URL + GET_ACTS + '?offset=' + obj.offset + '&order=' + obj.order,
+    getActByID: id => HOST_URL + GET_ACT_BY_ID + '?id=' + id,
+    getShare: (type, score, maxScore, matrix) => HOST_URL + GET_SHARE + '?type=' + type + '&score=' + score + '&maxScore=' + maxScore + '&matrix=' + matrix
 };

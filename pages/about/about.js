@@ -4,7 +4,7 @@ Page({
     data: {
         display_summary: 'display-none'
     },
-    onLoad: function() {
+    onLoad: function () {
         this.setData({
             display_summary: app.isApproved ? '' : 'display-none'
         });

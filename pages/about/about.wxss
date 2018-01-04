@@ -6,7 +6,7 @@
 
     background-color: #fff;
 }
-.about-main-wrap {
+.about-main-wrapper {
     height: 100%;
 }
 .about {

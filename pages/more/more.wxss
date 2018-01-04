@@ -4,7 +4,7 @@
     color: #333;
     background-color: #f3f3f3;
 }
-.more-main-wrap {
+.more-main-wrapper {
     display: flex;
 
     height: 100%;
@@ -21,7 +21,7 @@
     align-items: center;
     flex-direction: column;
 }
-.about-avatar-wrap {
+.about-avatar-wrapper {
     display: flex;
 
     width: 80px;

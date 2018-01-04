@@ -2,7 +2,7 @@ const util = require('./utils/util');
 
 App({
     isApproved: false,
-    onLaunch: function() {
+    onLaunch: function () {
         wx.request({
             url: util.getSignal(),
             success: (res) => {
@@ -17,4 +17,4 @@ App({
             }
         });
     }
-})
+});

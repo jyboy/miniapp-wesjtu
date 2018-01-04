@@ -14,7 +14,6 @@
                 <view class="act-right-wrapper">
                     <view class="act-top">
                         <view class="act-name"><view class="act-name-wrapper">{{item.name}}</view></view>
-                        <view class="act-status act-status-user {{item.status_style}}">{{item.status}}</view>
                     </view>
                     <view class="act-middle">
                         <view class="act-middle-wrapper">
@@ -48,6 +47,7 @@
                     </view>
                 </view>
             </view>
+            <view class="act-status act-status-user {{item.status_style}}">{{item.status}}</view>
         </view>
         <view class="load-more" hidden="{{moreHidden}}">
             <view class="load-content">

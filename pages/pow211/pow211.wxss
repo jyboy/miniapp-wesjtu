@@ -6,7 +6,7 @@
     flex-direction: column;
     justify-content: center;
 }
-.score-wrap {
+.score-wrapper {
     display: flex;
 }
 .score-title {
@@ -46,7 +46,7 @@
     font-weight: 700;
     line-height: 45rpx;
 }
-.bc-wrap {
+.bc-wrapper {
     display: flex;
 
     margin: 40rpx 40rpx;
@@ -131,7 +131,7 @@
     color: #fff7eb;
     background-color: #eec22e;
 }
-.btn-wrap {
+.btn-wrapper {
     padding: 40rpx;
 }
 #btn {

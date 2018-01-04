@@ -1,5 +1,4 @@
 .detail-main {
-    box-sizing: border-box;
     min-height: 100%;
 
     font-size: 12px;
@@ -35,7 +34,6 @@
     height: 60px;
 }
 .head-right {
-    box-sizing: border-box;
     padding: 10px;
     padding-right: 15px;
     width: 100%;
@@ -128,7 +126,7 @@
 
     width: calc(50% - 15px);
 }
-.act-end-line-wrap {
+.act-end-line-wrapper {
     position: absolute;
     top: 50%;
 
@@ -142,6 +140,6 @@
 
     color: #b2b2b2;
 }
-.btn-wrap {
+.btn-wrapper {
     padding: 15px 15px 30px;
 }
