@@ -6,7 +6,7 @@ App({
         wx.request({
             url: util.getSignal(),
             success: (res) => {
-                if (res.statusCode == 200) {
+                if (+res.statusCode === 200) {
                     this.isApproved = res.data.isApproved;
                 }
             }

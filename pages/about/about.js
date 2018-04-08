@@ -3,11 +3,22 @@ const app = getApp();
 Page({
     data: {
         display_summary: app.isApproved ? '' : 'display-none',
-        wechat_url: 'http://okoz2doi2.bkt.clouddn.com/image/qrcode_wechat.jpg'
+        wechatUrl: 'http://okoz2doi2.bkt.clouddn.com/images/qrcode_wechat.jpg'
+    },
+    copy: (e) => {
+        wx.setClipboardData({
+            data: e.currentTarget.dataset.href,
+            success: () => {
+                wx.showToast({
+                    title: '已复制到剪贴板',
+                    duration: 1000
+                });
+            },
+        });
     },
     previewWechat: function() {
         wx.previewImage({
-            urls: [this.data.wechat_url]
+            urls: [this.data.wechatUrl]
         });
     }
 });
