@@ -9,27 +9,31 @@ Page({
         order: 'act.create_time',
         moreHidden: true
     },
-    onLoad: function () {
+    onLoad: function (opts) {
+        if (opts.order === '') {
+            this.onTapHot();
+        } else {
+            this.onTapNew();
+        }
+    },
+    onTapNew: function() {
+        this.setData({
+            hot: '',
+            new: 'top-bar-item-active',
+            offset: 0,
+            order: 'act.create_time'
+        });
         this.fetchData({
             order: this.data.order
         });
     },
-    onTapTag: function (e) {
-        if (e.currentTarget.id === 'hot') {
-            this.setData({
-                hot: 'top-bar-item-active',
-                new: '',
-                offset: 0,
-                order: ''
-            });
-        } else {
-            this.setData({
-                hot: '',
-                new: 'top-bar-item-active',
-                offset: 0,
-                order: 'act.create_time'
-            });
-        }
+    onTapHot: function () {
+        this.setData({
+            hot: 'top-bar-item-active',
+            new: '',
+            offset: 0,
+            order: ''
+        });
         this.fetchData({
             order: this.data.order
         });
@@ -68,8 +72,10 @@ Page({
             order: this.data.order
         });
     },
-    onShareAppMessage: () => ({
-        title: '同去 -「我交」',
-        path: '/pages/tongqu/tongqu'
-    })
+    onShareAppMessage: function () {
+        return {
+            title: '同去 -「我交」',
+            path: `/pages/tongqu/tongqu?order=${this.data.order}`
+        };
+    }
 });

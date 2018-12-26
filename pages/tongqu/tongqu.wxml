@@ -1,7 +1,7 @@
 <view class="tongqu-main">
     <view class="top-bar">
-        <view class="top-bar-item {{new}}" id="new" catchtap="onTapTag"><view class="top-bar-item-wrapper">最新活动</view></view>
-        <view class="top-bar-item {{hot}}" id="hot" catchtap="onTapTag"><view class="top-bar-item-wrapper">热门活动</view></view>
+        <view class="top-bar-item {{new}}" catchtap="onTapNew"><view class="top-bar-item-wrapper">最新活动</view></view>
+        <view class="top-bar-item {{hot}}" catchtap="onTapHot"><view class="top-bar-item-wrapper">热门活动</view></view>
     </view>
     <scroll-view class="acts-list" scroll-y="true" bindscrolltolower="lower">
         <view wx:for="{{actsList}}" wx:key="{{actid}}" class="act-item" id="{{item.actid}}" catchtap="navigateDetail">

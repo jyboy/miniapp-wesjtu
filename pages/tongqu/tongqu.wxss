@@ -169,12 +169,12 @@
     align-items: center;
 }
 .act-views-icon {
-    width: 15px;
-    height: 15px;
+    width: 16px;
+    height: 16px;
 }
 .act-members-icon {
-    width: 14px;
-    height: 14px;
+    width: 15px;
+    height: 15px;
 }
 .act-views-text,
 .act-members-text {
